@@ -1,34 +1,42 @@
 class Game {
     constructor (){
-        this.grid = null;
+        this.gridCol = 36;
         this.time = 0;
-        this.mines = null;
+        this.pizzas = 10;
         this.playerScore = 0;
+        this.shuffleArr = [];
     }
 
     
     start(){
         creatMatrix();
         
+        
     }
     
 
+    makingShufflingarr(){
+        let pizzasArr = [];
+        let stringpizza = 'pizza'
+        let emptyArr = [];
+        let emptyString = 'empty';
+        for (let i = 0; i< this.pizzas; i++){
+            pizzasArr.push(stringpizza);
+        }
+        
+        for (let i = 0; i < this.gridCol - this.pizzas; i++){
+            emptyArr.push(emptyString);
+        }
 
-
-
-
-
-
-
-
-
+        // regrouping both arrays
+        let pizzasAndEmptySpace = [...pizzasArr, ...emptyArr];
+        
+        // shuffling array
+        this.shuffleArr = pizzasAndEmptySpace.sort((a, b) => 0.5 - Math.random());
+    } 
 }
 
 
-
-class Mine {
-    constructor(){}
-}
 
 
 class PlayerScore{
