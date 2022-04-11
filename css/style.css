@@ -1,0 +1,22 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 720px;
+}
+
+
+
+#matrix {
+ height: 300px;
+ width: 300px;
+ display: flex;
+ flex-wrap: wrap;
+ background-color: rgb(150, 150, 237);
+  
+}
+
+#matrix div {
+  height: 100px;
+  width: 100px;
+}
