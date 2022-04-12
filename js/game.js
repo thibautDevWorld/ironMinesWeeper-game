@@ -2,7 +2,7 @@ class Game {
     constructor (){
         this.gridCol = 36;
         this.time = 0;
-        this.pizzas = 10;
+        this.mines = 10;
         this.playerScore = 0;
         this.shuffleArr = [];
     }
@@ -16,24 +16,27 @@ class Game {
     
 
     makingShufflingarr(){
-        let pizzasArr = [];
-        let stringpizza = 'pizza'
+        let minesArr = [];
+        let stringmines = 'mines'
         let emptyArr = [];
         let emptyString = 'empty';
-        for (let i = 0; i< this.pizzas; i++){
-            pizzasArr.push(stringpizza);
+        for (let i = 0; i< this.mines; i++){
+            minesArr.push(stringmines);
         }
         
-        for (let i = 0; i < this.gridCol - this.pizzas; i++){
+        for (let i = 0; i < this.gridCol - this.mines; i++){
             emptyArr.push(emptyString);
         }
 
         // regrouping both arrays
-        let pizzasAndEmptySpace = [...pizzasArr, ...emptyArr];
+        let minesAndEmptySpace = [...minesArr, ...emptyArr];
         
         // shuffling array
-        this.shuffleArr = pizzasAndEmptySpace.sort((a, b) => 0.5 - Math.random());
+        this.shuffleArr = minesAndEmptySpace.sort((a, b) => 0.5 - Math.random());
+        return this.shuffleArr
     } 
+
+
 }
 
 

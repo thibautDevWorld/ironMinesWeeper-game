@@ -1,9 +1,8 @@
 
 const newGame = new Game();
 
-console.log(newGame.shuffleArr);
+
 newGame.start();
-newGame.makingShufflingarr();
 
 
 
@@ -12,16 +11,18 @@ newGame.makingShufflingarr();
 function creatMatrix(){
     const matrix = document.getElementById("matrix");
         let cells = [];
-    
+        const shufflePositions = newGame.makingShufflingarr();  
         for (let i = 0; i < newGame.gridCol; i ++){
             let cell = document.createElement("div");
-            // cell.classList.add(drawPizzas[i]);
             cell.setAttribute("id", i);
+            cell.classList.add(shufflePositions[i])
+            
+            
             matrix.appendChild(cell);
             cells.push(cell);              
         }
 
-      
+        
 }
 
 
@@ -33,11 +34,8 @@ function creatMatrix(){
 
 
 
-
 document.addEventListener('click', (e) => {
-
-    
-
-   
-
+if(e.target === cell.classList.contains("pizza"))
+    // alert "Game Over";
+console.log(cell.classList.contains("empty"));
 })
