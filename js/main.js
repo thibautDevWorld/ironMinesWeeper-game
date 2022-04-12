@@ -35,7 +35,7 @@ function creatMatrix(){
 
 
 document.addEventListener('click', (e) => {
-if(e.target === cell.classList.contains("pizza"))
+if(e.target === cell.classList.contains("mines"))
     // alert "Game Over";
 console.log(cell.classList.contains("empty"));
 })
