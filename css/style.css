@@ -1,11 +1,25 @@
+body {
+  background-color: black;
+}
+
+
+
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 720px;
+  height: 700px;
+
 }
 
-
+#countDown {
+  color: rgb(101, 48, 247);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+  
+}
 
 #matrix {
  height: 600px;
@@ -13,11 +27,31 @@ section {
  display: flex;
  flex-wrap: wrap;
  background-color: rgb(150, 150, 237);
-  
 }
 
 #matrix div {
   height: 100px;
   width: 100px;
   
+}
+
+
+.checked {
+  background-color: rgb(156, 146, 132);
+}
+
+
+.fallOnMine {
+  background-color: red;
+  
+}
+
+h1 {
+ 
+  text-align: center;
+  text-transform: capitalize;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(101, 48, 247);
+  font-size: 50px;
+  padding: 120px 0 20px
 }
