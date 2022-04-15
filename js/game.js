@@ -42,6 +42,9 @@ function startGame(){
         }
         matrix.push(row) // send div position in the matrix array
     }
+
+    console.log("matrix");
+    console.log(matrix);
 }
 
 function displayMines(){
