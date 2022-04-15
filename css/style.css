@@ -64,13 +64,15 @@ h2 {
 
 .displayGameOver {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: blue;
   border: 30px solid black;
+  color: aqua;
   border-radius: 20px;
   padding: 20px;
-  height: 400px;
+  height: 600px;
   width: 400px;
   font-size: 75px;
   position: absolute;
@@ -78,6 +80,16 @@ h2 {
   z-index: 1000;
 }
 
+button {
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  background-color:aqua;
+  border: none;
+  border-radius: 20px;;
+}
 
 
 .hidden {
