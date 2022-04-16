@@ -37,14 +37,43 @@ function startGame(){
                     return;
                 }
                 e.target.classList.add("cell-clicked")
+
+                let test = 0;
+                if (minesPosition.includes(`${i-1}-${j-1}`)) {
+                    test++
+                }
+                if (minesPosition.includes(`${i-1}-${j}`)) {
+                    test++
+                }
+                if (minesPosition.includes(`${i-1}-${j+1}`)){
+                    test++
+                }
+                //////////////////////////////////////////////////////////////////////////
+                if (minesPosition.includes(`${i}-${j-1}`)) {
+                    test++
+                }
+                if (minesPosition.includes(`${i}-${j+1}`)) {
+                    test++
+                }
+                //////////////////////////////////////////////////////////////////////////
+                if (minesPosition.includes(`${i+1}-${j-1}`)) {
+                    test++
+                }
+                if (minesPosition.includes(`${i+1}-${j}`)) {
+                    test++
+                }
+                if (minesPosition.includes(`${i+1}-${j+1}`)){
+                    test++
+                }
+                //////////////////////////////////////////////////////////////////////////      
+                if(test > 0) {
+                    e.target.innerText = test
+                }               
             })
             ////////////////////////////////////////////////////////////////////////////////                        
         }
         matrix.push(row) // send div position in the matrix array
-    }
-
-    console.log("matrix");
-    console.log(matrix);
+    } 
 }
 
 function displayMines(){
@@ -58,6 +87,14 @@ function displayMines(){
     }
 }
 
+function displayMinesNumber(){
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < columns; j++) {
+            const matrixDivSelection = document.getElementById("matrix")
+            console.log(matrixDivSelection);
+        }
+    }
+}
 
 function removeClassHidden(){
     let displayMess = document.getElementsByClassName("hidden");
